@@ -38,6 +38,10 @@ $ git branch -a
   remotes/origin/v1.0-stable
   remotes/origin/experimental
 ```
+Create a Git branch and checkout in one command:
+```
+$ git checkout -b <branch_name>
+```
 If you just want to take a quick peek at an upstream branch, you can check it out directly:
 ```
 $ git checkout origin/experimental
