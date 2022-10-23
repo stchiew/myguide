@@ -15,3 +15,23 @@ Recursively count only subfolders in a directory:
 Recursively count only files in a folder:
 
 `(Get-ChildItem -Recurse -File | Measure-Object).Count`
+
+### Loaded Assemblies
+
+Display loaded assemblies in grid view
+
+```
+ [System.AppDomain]::CurrentDomain.GetAssemblies() | Where-Object Location |
+ Sort-Object -Property FullName |
+ Select-Object -Property FullName, Location, GlobalAssemblyCache, IsFullyTrusted |
+ Out-GridView
+```
+
+Various ways to filter and display loaded assemblies
+
+```
+$LoadedAssemblies = [System.AppDomain]::CurrentDomain.GetAssemblies() | Where-Object Location -like '*Az.Storage*'
+$LoadedAssemblies | Select-Object Location
+
+$LoadedAssemblies | Where-Object Location -like '*Microsoft.Indentity.*.dll' | Select-Object -ExpandProperty FullName
+```
