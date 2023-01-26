@@ -16,7 +16,7 @@ $wordDoc = Replace-OpenXmlElement -Path $wordDoc -ElementName "w:p" -Index $inde
 $wordDoc | Set-Content -Path "path\to\modified_document.docx" -Encoding Byte
 ```
 
-C# code
+### C# code
 
 ```
 using (WordprocessingDocument doc = WordprocessingDocument.Open(fileName, true))
@@ -30,7 +30,7 @@ using (WordprocessingDocument doc = WordprocessingDocument.Open(fileName, true))
 }
 ```
 
-Suggested by chatgpt
+### Suggested by chatgpt
 
 ```
 $mainPart = $doc.MainDocumentPart
@@ -39,4 +39,28 @@ $p.Remove()
 $newP = New-Object -TypeName Microsoft.OpenXml.Wordprocessing.Paragraph -ArgumentList (New-Object -TypeName Microsoft.OpenXml.Wordprocessing.Run -ArgumentList (New-Object -TypeName Microsoft.OpenXml.Wordprocessing.Text -ArgumentList $text))
 $mainPart.Document.Body.InsertAt($newP, $index)
 $mainPart.Document.Save()
+```
+
+### Using objects
+
+```
+Add-Type -Path ".\lib\net46\DocumentFormat.OpenXml.dll"
+$templateWordPath = ".\OpenXmlTemplate.docx"
+$wordPath = ".\SampleOutput2.docx"
+$text = "New text added"
+Copy-Item $templateWordPath -Destination $wordPath -Force
+
+$myDoc = [DocumentFormat.OpenXml.Packaging.WordprocessingDocument]::Open($wordPath, $true)
+$mainPart = $myDoc.MainDocumentPart;
+$body = $mainPart.Document.Body
+
+$paraObj = New-Object -TypeName 'DocumentFormat.OpenXml.Wordprocessing.Paragraph'
+$para = $body.AppendChild($paraObj)
+$runObj = New-Object -TypeName DocumentFormat.OpenXml.Wordprocessing.Run
+
+$run = $para.AppendChild($runObj)
+$run.AppendChild((New-Object -TypeName DocumentFormat.OpenXml.Wordprocessing.Text -ArgumentList $text ))
+
+$mainPart.Document.Save()
+$myDoc.Close()
 ```
