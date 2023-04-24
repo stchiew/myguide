@@ -18,3 +18,23 @@ ClearCollect(
     }
 )
 ```
+
+### Add a running row number to a collection
+
+```
+ClearCollect(
+    col_Titles,
+    ForAll(
+        Sequence(CountRows(col_Titles)) As Seq,
+        Patch(
+            Last(
+                FirstN(
+                    col_Titles,
+                    Seq.Value
+                )
+            ),
+            {Id: Seq.Value}
+        )
+    )
+)
+```
