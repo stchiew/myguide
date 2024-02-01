@@ -37,3 +37,13 @@ Add-PnPSiteCollectionAppCatalog -site https://contoso.sharepoint.com/sites/marke
 ```
 
 Reference [Create site collection app catalog](https://learn.microsoft.com/en-us/sharepoint/dev/general-development/site-collection-app-catalog?WT.mc_id=M365-MVP-4030574#create-a-site-collection-app-catalog)
+
+### Learn more about SPFx development:
+
+- [SharePoint Framework Overview](https://aka.ms/spfx)
+- [Use Microsoft Graph in your solution](https://aka.ms/spfx-yeoman-graph)
+- [Build for Microsoft Teams using SharePoint Framework](https://aka.ms/spfx-yeoman-teams)
+- [Build for Microsoft Viva Connections using SharePoint Framework](https://aka.ms/spfx-yeoman-viva)
+- [Publish SharePoint Framework applications to the marketplace](https://aka.ms/spfx-yeoman-store)
+- [SharePoint Framework API reference](https://aka.ms/spfx-yeoman-api)
+- [Microsoft 365 Developer Community](https://aka.ms/m365pnp)
