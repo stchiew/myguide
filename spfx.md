@@ -24,6 +24,14 @@ Uninstall-PnPApp -Identity $app.id -Scope Site
 Remove-PnPApp -Identity $app.id -Scope Site
 ```
 
+Using M365 CLI
+
+```
+$id = m365 spo app list -u https://tenant/sites/mysite -s sitecollection
+m365 spo app uninstall -i $id --appCatalogScope sitecollection -s https://tenant/sites/mysite
+m365 spo app remove -i $id -s sitecollection -u https://tenant/sites/mysite
+```
+
 ### Create a site collection app catalog
 
 Before running the following script, connect to your SharePoint Online tenant using the `Connect-SPOService` or the PnP version `Connect-PnPOnline`.
