@@ -1,3 +1,9 @@
+---
+title: PowerShell
+nav_order: 5
+layout: home
+---
+
 # PowerShell
 
 ### Count items in folder

@@ -1,3 +1,9 @@
+---
+title: Dev
+nav_order: 6
+layout: home
+---
+
 # Scaffolding
 
 ## Scaffolding Your First Vite Project
