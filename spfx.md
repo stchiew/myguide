@@ -1,3 +1,9 @@
+---
+title: SPfX
+nav_order: 3
+layout: home
+---
+
 # SharePoint Framework
 
 ### Run specific generator version

@@ -1,3 +1,28 @@
+---
+title: Git
+nav_order: 2
+layout: home
+---
+
+# Getting started
+```
+git clone https://github.com/stchiew/myguide.git
+```
+…or create a new repository on the command line
+```
+echo "# myguide" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/stchiew/myguide.git
+git push -u origin master
+```
+…or push an existing repository from the command line
+```
+git remote add origin https://github.com/stchiew/myguide.git
+git push -u origin master
+```
+
 ### Overwrite local files from remote
 
 If you feel the need to discard all your local changes and just reset/overwrite everything with a copy from the remote branch then you should follow this guide.

@@ -1,0 +1,10 @@
+title: Read the Docs
+description: A starter template for a Jeykll site using the Just the Docs theme!
+theme: just-the-docs
+
+url: https://stchiew.github.io/myguide/
+
+aux_links:
+  View GitHub Repository: https://github.com/stchiew/myguide
+
+aux_links_new_tab: true

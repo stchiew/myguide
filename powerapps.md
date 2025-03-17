@@ -1,3 +1,9 @@
+---
+title: PowerApps
+nav_order: 4
+layout: home
+---
+
 ### Create a new collection
 ```
 ClearCollect(
