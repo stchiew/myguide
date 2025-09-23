@@ -1,5 +1,5 @@
 ---
-title: SPfX
+title: SPFx
 nav_order: 3
 layout: home
 ---
@@ -11,7 +11,7 @@ layout: home
 Note: yo must not be globally installed
 
 ```
-npx -p yo -p @microsoft/generator-sharepoint@1.12.1 -- yo @microsoft/sharepoint --skip-install
+npx -p yo -p @microsoft/generator-sharepoint@1.21.1 -- yo @microsoft/sharepoint --skip-install
 ```
 
 or other options
