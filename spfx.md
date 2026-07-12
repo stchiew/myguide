@@ -6,6 +6,18 @@ layout: home
 
 # SharePoint Framework
 
+### Using spfx-cli
+
+```
+npx -p yo -p @microsoft/spfx-cli -- spfx create \\
+  --template webpart-react \\
+  --library-name try-spfx-lib \\
+  --component-name "Hello There"
+```
+
+[Guide](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/toolchain/sharepoint-framework-cli)
+
+
 ### Run specific generator version
 
 Note: yo must not be globally installed
