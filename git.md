@@ -42,7 +42,7 @@ For example:
 
 ```
 git fetch --all
-git reset --hard origin/master
+git reset --hard origin/dev
 ```
 
 Ref: https://www.freecodecamp.org/forum/t/git-pull-how-to-override-local-files-with-git-pull/13216
